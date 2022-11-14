@@ -11,7 +11,7 @@ HidePath('/usr/share/zoneinfo/')
 HidePath('/usr/share/ssl/')
 
 function OnHttpRequest()
-   local route = VisualizeControlCodes(GetEffectivePath())
+   local route = GetEffectivePath()
    if delegate[route] then
       Write(head)
       Write(nav)
@@ -19,7 +19,7 @@ function OnHttpRequest()
    else
       ServeAsset()
    end
-   if VisualizeControlCodes(GetMethod()) == 'POST' then
+   if GetMethod() == 'POST' then
       complaints_xhr.test()
    end
 end
