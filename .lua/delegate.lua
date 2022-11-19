@@ -1,8 +1,6 @@
 local art = require 'pages/art'
 local astar = require 'pages/astar'
-local blog = require 'pages/blog'
 local boids = require 'pages/boids'
-local complaints = require 'pages/complaints'
 local contact = require 'pages/contact'
 local index = require 'index'
 local drunk = require 'pages/drunk'
@@ -15,8 +13,7 @@ local typing = require 'pages/typing'
 local zalgo = require 'pages/zalgo'
 
 local delegate = {
-    ['/art'] = art, ['/astar'] = astar, ['/blog'] = blog, ['/boids'] = boids, ['/complaints'] = complaints,
-    ['/contact'] = contact, ['/drunk'] = drunk, ['/index'] = index, ['/language'] = language,
+    ['/art'] = art, ['/astar'] = astar, ['/boids'] = boids, ['/contact'] = contact, ['/drunk'] = drunk, ['/index'] = index, ['/language'] = language,
     ['/projection'] = projection, ['/stocks'] = stocks, ['/style'] = style, ['/types'] = types, ['/typing'] = typing, ['/zalgo'] = zalgo,
     ['/'] = index, [''] = index
 }

@@ -19,15 +19,15 @@ return
         </p>
 
         <div class="subheadContainer">
-        <h3>Technically Tutorials</h3>
+        <h3>Technical Tutorials</h3>
             <br>
-            <a class = "articleLinks" href ="astar">A* Pathfinding</a><br>
+            <a class="articleLinks" href ="astar">A* Pathfinding</a><br>
             <a class="articleLinks" href="drunk">Drunk Walk Algorithm</a><br>
             <a class="articleLinks" href="stocks">Dividend Calculator</a><br>
             <a class="articleLinks" href="projection">Axonometric Projection</a><br>
             <a class="articleLinks" href="types">Custom Types in Lua</a><br>
         </div>
-    
+
         <div class="subheadContainer">
             <h3>Technically Failures</h3>
             <br>
@@ -39,10 +39,7 @@ return
             <h3>Other Things</h3>
             <br>
             <a class="articleLinks" href="typing">Typing Game</a><br>
-            <a class="articleLinks" href="blog">Blog</a><br>
-            <a class="articleLinks" href="complaints">Curmudgeon's Complaint Corner</a><br>
         </div>
     </div>
-
 
 ]]

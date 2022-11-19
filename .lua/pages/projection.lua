@@ -58,20 +58,20 @@ return [[
     </pre>
 
     <p>Output:</p>
-    <img class = "small_img" src = "images/projection_1.png"></img>
+    <img class = "small_img" src = "assets/images/projection_1.png"></img>
 
     <p>This type of map will work perfectly for many games. If we were to draw our characters from above, as if we were looking directly down to the tops
         of their heads, it would be called a top-down perspective. We could also draw them from the side to emulate perspective, and this would be called
         orthographic projection. However, to achieve our slightly more sophisticated axonometric look, we will first need to rotate our grid by 45 degrees.
     </p>
-    <img class = "small_img" src = "images/projection_2.png"></img>
+    <img class = "small_img" src = "assets/images/projection_2.png"></img>
     <p>We've not only shifted our <em>x</em> and <em>y</em> axes used for drawing, but we've also shifted our <em>input</em> by 45 degrees. If our player
     moves left, he is moving left and up, and if he moves down, then it is down and right. There are many ways to handle this, the least obvious but
     perhaps best method is to do nothing. The player will quickly adapt to the new control scheme.</p>
 
     <p>The next step now is to squash our <em>y</em> axis by 50%. This step is what causes our brains to perceive a <em>z</em> axis- that is, it gives
     it depth.</p>
-    <img class = "small_img" src = "images/projection_3.png"></img>
+    <img class = "small_img" src = "assets/images/projection_3.png"></img>
     <p>Here is how our viewport has changed:</p>
     <pre>
         <code>
@@ -122,14 +122,14 @@ return [[
     <img style = "width: 5%; margin: auto; display: block;" src = "images/template_32.png"></img>
 
     <p>Let's go ahead and plug it into our code and see what it looks like:</p>
-    <img class = "small_img" src = "images/projection_4.png"></img>
+    <img class = "small_img" src = "assets/images/projection_4.png"></img>
 
     <p>With no offset, the upper left corner of the image is where the draw starts. The first tile being drawn is the one in the upper left corner of the
         screen, and since we're subtracting from the <em>x</em> axis, it's drawn halfway off of the edge of screen. So you will have to be aware that
         you will need to translate the <em>x</em> axis by half of the map width. It's also worth noting that this draw order is perfect for what we're doing;
         We don't need a separate <em>z</em> index for ordering our draw operations. Let's see what it looks like centered and scaled.</p>
 
-    <img class = "small_img" src = "images/projection_5.png"></img>
+    <img class = "small_img" src = "assets/images/projection_5.png"></img>
 
     <p>It looks blurry. LÖVE, by default, interpolates graphics information with a <em>linear</em> algorithm. This means, if you're doing pixel art, or
     otherwise have low resolution images, you will have a poor outcome when scaling up. The more work-intensive way to solve this problem is by drawing
@@ -184,20 +184,20 @@ return [[
     </pre>
 
 
-    <img class = "small_img" src = "images/projection_6.png"></img>
+    <img class = "small_img" src = "assets/images/projection_6.png"></img>
 
     <p>Okay! So it looks sharp now. We're ready to wrap it up, right? <em>Beware Murphy's Law.</em> We've just been looking at screenshots so far, and
         we haven't actually moved around.
     </p>
 
-    <video src = "videos/projection_1.mp4" controls muted></video>
+    <video src = "assets/videos/projection_1.mp4" controls muted></video>
 
     <p>Do you notice the flickering on the edges of the tiles, and how the lines aren't very straight? That's due to aliasing. You must do all of your 
         drawing operations by whole numbers to get smooth movement without this flickering. If you have already written all of your code as floats, that's okay. 
         Just make sure to use a rounding function like <em>math.floor</em> on the coordinates and scale when it is drawn.
     </p>
 
-    <video src = "videos/projection_2.mp4" controls muted></video>
+    <video src = "assets/videos/projection_2.mp4" controls muted></video>
 
     <p>I hope I've done a good job covering the basics of axonometric projection. If you have any questions, or suggestions for the article, feel free
         to let me know. Thanks for reading!

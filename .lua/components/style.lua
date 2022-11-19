@@ -56,6 +56,17 @@ body {
     color: white;
 }
 
+.title_frames {
+    display: none;
+    position: fixed;
+    height: 40%;
+    border: none;
+}
+
+.title_frames:hover {
+    display: fixed;
+}
+
 .subheadContainer {
     padding: 20px;
     text-align: center;
@@ -299,7 +310,7 @@ td {
 }
 
 .boids {
-    position: absolute;
+    position: fixed;
     background-color: white;
     height: 5px;
     width: 5px;

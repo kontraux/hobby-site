@@ -2,7 +2,7 @@ return [[
     <body>
         <div class = "wrapper">
         <h2>Get drunk and take a walk.</h2>
-        
+
         <center>
             <div>
                 <canvas style="max-width: 100%; max-height: 75%" id="canvas" oncontextmenu="event.preventDefault()"></canvas>

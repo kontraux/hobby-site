@@ -340,7 +340,28 @@ return [[
             next time!</p>
         </div>
     </div>
+    <script>
+    let flocks = 3
+    function makeBoids() {
+        let boids_num = Math.random() * 10
+        let boids = {}
+        for (let i = 1; i < boids_num; i++) { 
+            let width = visualViewport.width;
+            let height = visualViewport.height;
+            boids[i] = document.createElement('div')
+            boids[i].classList.toggle('boids')
+            boids[i].style.left = -20
+            boids[i].style.top = height * Math.random()
+            boids[i].animate( [ { transform: `translateX(${width}px)` }, {transform: `translateY(${height * Math.random()}px)`}], { duration: (7000 * (i + Math.random())) })
+            document.body.appendChild(boids[i])
+        }
+    }
+
+    setTimeout(makeBoids, 1500)
+    setTimeout(makeBoids, 2000)
+    </script>
 </body>
+
 
 
 ]]
