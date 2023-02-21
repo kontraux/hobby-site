@@ -9,21 +9,16 @@ return [[
         let txt = 'Do a custom type.';
         let i = 0;
         function typewriter() {
-
             let item = document.getElementById('typed') 
-
             if(!item) {window.setTimeout(typewriter, 150)}
             else
-
             if (i < txt.length) {
                 item.innerHTML += txt.charAt(i);
                 i++;
                 setTimeout(typewriter, 100);
-
             }
         }
         typewriter() </script>
-
 
         <p id = "here">Lua has 8 types: table, function, number, string, boolean, nil, userdata, and thread. This means that any structured data is going to be contained
             in a table, there are no arrays, dictionaries, lists, etc. and really, you don't need them. But I did notice that LÖVE has its own custom types, 
@@ -32,7 +27,6 @@ return [[
         </p>
 
         <h3>Create an object.</h3>
-
             <p>Our object is going to start as... well, a table of course. So we'll make a <em>new</em> function, so that we can define <em>self.</em> In Lua,
                 there aren't true classes, so you just use a function like this if you want to emulate one.
             </p>

@@ -8,7 +8,7 @@ return [[
 
         <center>
             <div>
-                <canvas style="width: 90%; height: autoheight;" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+                <canvas style="max-width: 100%; max-height: 75%" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
                 <canvas id="loadingCanvas" oncontextmenu="event.preventDefault()" width="0" height="0"></canvas>
             </div>
         </center>

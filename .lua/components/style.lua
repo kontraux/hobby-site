@@ -6,11 +6,6 @@ html {
 
 body {
     margin: 0;
-    background-image: url("/assets/images/tarantula_nebula.webp");
-    background-position: 50% 50%;
-    background-attachment: fixed;
-    background-repeat:no-repeat;
-    background-size: 100% 100%;
 }
 
 .plist li {
@@ -52,7 +47,7 @@ body {
 }
 
 .dark_mode {
-    background-color: black;
+    background-color: white;
     color: white;
 }
 
@@ -188,7 +183,7 @@ img {
 }
 
 .light_mode pre code {
-    background-color: whitesmoke;
+    background-color: white;
     box-shadow: -3px 5px 10px 5px lightgray, 3px 5px 10px 5px lightgray;
 }
 
@@ -218,7 +213,7 @@ li a {
 
 .nav {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 15%;
     right: 15%;
@@ -291,6 +286,8 @@ td {
 
 .wrapper {
     min-height: 100%;
+    z-index: 1;
+    top: 0;
     background-color: black;
     opacity: 100%;
     padding: 2%;
@@ -323,7 +320,9 @@ td {
 
 .light_mode {
     color: black;
+    /*
     background-image: url("/assets/images/corina_nebula.webp");
+    */
 }
 
 .light_mode a {
@@ -340,12 +339,11 @@ td {
 
 @media only screen and (max-width: 800px) {
     .wrapper {
-        margin: 5%;
+        margin: 10%;
     }
     .nav {
         left: 5%;
         right: 5%;
     }
 }
-
 ]]

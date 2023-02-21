@@ -119,7 +119,7 @@ return [[
         basic 32x32 tile that can be used to draw our ground.
     </p>
 
-    <img style = "width: 5%; margin: auto; display: block;" src = "images/template_32.png"></img>
+    <img style = "width: 5%; margin: auto; display: block;" src = "assets/images/template_32.png"></img>
 
     <p>Let's go ahead and plug it into our code and see what it looks like:</p>
     <img class = "small_img" src = "assets/images/projection_4.png"></img>
