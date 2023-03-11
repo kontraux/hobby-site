@@ -33,7 +33,7 @@ local background = [[
     #define OCTAVES 6
 
     float random (in vec2 st) {
-        return fract(sin(dot(st.xy, vec2(11.32423, 78.93242))) * 4301.22456);
+        return fract(sin(dot(st.xy, vec2(1.32423, 1.93242))) * 4301.22456);
     }
 
     float noise(vec2 st) {
@@ -43,7 +43,7 @@ local background = [[
         float b = random(i + vec2(1.0, 0.0));
         float c = random(i + vec2(0.0, 1.0));
         float d = random(i + vec2(1.0, 1.0));
-        vec2 cubic = f * f * (3.0 - 2.0 * f);
+        vec2 cubic = f * f * (3.0 - 2.0 * f) * f;
         return mix(a, b, cubic.x) + (c-a) * cubic.y * (1.0 - cubic.x) + (d - b) * cubic.x * cubic.y;
     }
 
@@ -53,7 +53,7 @@ local background = [[
         for (int i = 0; i < OCTAVES; i++) {
             value += noise(st) * scale;
             st *= 2.0;
-            scale *= 0.53;
+            scale *= 0.6;
         }
         return value;
     }
@@ -62,31 +62,31 @@ local background = [[
         vec2 st = gl_FragCoord.xy/resolution * 4.0;
         
         vec2 q = vec2(0.);
-        q.x = fbm(st + 0.00*time);
-        q.y = fbm(st + vec2(1.0));
+        q.x = fbm(st + 0.001*time);
+        q.y = fbm(st + vec2(90));
 
         vec2 r = vec2(0.);
-        r.x = fbm(st + 1.0*q + vec2(1.7, 9.2) + 0.25*time);
-        r.y = fbm(st + 1.0*q + vec2(8.2, 2.8) + 0.25*time);
+        r.x = fbm(st + 1.0*q + vec2(1.7, 9.2) + 0.15*time);
+        r.y = fbm(st + 1.0*q + vec2(8.2, 2.8) + 0.15*time);
 
         float f = fbm(st + r);
         vec3 newcolor = color;
-        newcolor = mix(     vec3(0.901961, 0.919608, 0.667653),
-                            vec3(0.266667, 0.866667, 0.498039),
+        newcolor = mix(     vec3(0.101961, 0.419608, 0.767653),
+                            vec3(0.266667, 0.366667, 0.898039),
                             clamp((f*f)*4.0, 0.0, 1.0));
 
         newcolor = mix(     newcolor,
-                            vec3(0, 0, 0),
+                            vec3(0.0, 0.0, 0.0),
                             clamp(length(q), 0.0, 0.0));
 
         newcolor = mix(     newcolor,
-                            vec3(1.6, 1, 0.5),
-                            clamp(length(r.x), 0.0, 1.0));
+                            vec3(0.6, 0.0, 0.4),
+                            clamp(length(r.x), 0.6, 1.0));
 
-        vec3 final = vec3((f*f*f+.6*f*f+.5*f) * newcolor * f);
+        vec3 final = vec3((f * f * f + 0.6 * f * f + 0.5* f ) * newcolor * f);
         gl_FragColor = vec4(final, 1.0);
-    }
-    `;
+    }`;
+
     var vertexShader = gl.createShader(gl.VERTEX_SHADER);
     gl.shaderSource(vertexShader, vertexShaderSource);
     gl.compileShader(vertexShader);
@@ -117,9 +117,9 @@ local background = [[
     gl.enableVertexAttribArray(positionAttributeLocation);
     gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
     var timeLocation = gl.getUniformLocation(shaderProgram, 'time');
-    var resolution = gl.getUniformLocation(shaderProgram, 'resolution')
+    var resolution = gl.getUniformLocation(shaderProgram, 'resolution');
     gl.uniform3fv(colorUniformLocation, [0.0, 0.0, 0.0]);
-    gl.uniform2fv(resolution, [640, 640] )
+    gl.uniform2fv(resolution, [screen.width * 0.5, screen.height * 0.5] );
 
     function render(time) {
         gl.uniform1f(timeLocation, time * 0.001);

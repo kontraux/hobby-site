@@ -2,9 +2,9 @@ return [[
 <body>
     <div class = "wrapper">
 
-    <h2>Do a very Luacrative software.</h2>
+    <h1>Do a very Luacrative software.</h1>
     <video class = "art_video" style = "border: none" src="./assets/videos/stocks.mp4" loop autoplay muted></video>
-    <h3>Everyone's mom wants them to be a doctor, lawyer, or Lua developer.</h3>
+    <h2>Everyone's mom wants them to be a doctor, lawyer, or Lua developer.</h2>
     <p>Making a dividend calculator or stock tracking program doesn't sound terribly compelling, but it's actually more fun than it sounds, and it's
         really great for practicing coding. You can make it as simple or complicated as you want, and if you're learning to code, you'll probably
         need some financial software for all that money you're about to make.

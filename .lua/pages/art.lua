@@ -3,12 +3,12 @@ return [[
 
 <body>
     <div class="wrapper">
-            <h2>Do an art (by accident).</h2>
-                <div class="warning_box subheadContainer">
-                    <h4 class="warning_text"><b>Photosensitivity warning:</b> Images and videos on this page may trigger
+            <h1>Do an art (by accident).</h1>
+                <div class="warning_box sub_container">
+                    <h2 class="warning_text"><b>Photosensitivity warning:</b> Images and videos on this page may trigger
                         seizures in photosensitive individuals. Viewer discretion is advised.
-                    </h4>
-                    <a class="articleLinks" href="index">Return to homepage.</a>
+                    </h2>
+                    <a class="alinks" href="index">Return to homepage.</a>
                 </div>
 
                 <div>
@@ -70,7 +70,7 @@ return [[
                     permutation tables?) and partly because I get sick of people telling me "don't reinvent the wheel." Look, if I didn't enjoy writing
                     my own code, I'd download Unity.
                 </p>
-                <h3>Make some noise in the hizzy!</h3>
+                <h2>Make some noise in the hizzy!</h2>
 
                 <p>So I set out to make some noise. Since I'm such a smart guy- <em>a wise man; a shaman,</em> I decided the
                     best way to do this would be to start punching numbers in randomly. And of course, what I got was... unexpected?</p>
@@ -112,6 +112,7 @@ return [[
 
             <p>After that, I just started experimenting with different numbers, adding colors, changing draw shapes, etc.</p>
 
+            <hr>
             <table>
                 <tr>
                     <td>
@@ -140,7 +141,7 @@ return [[
                     </td>
                 </tr>
             </table>
-
+            <hr>
             <p>Okay, so I haven't gotten a call from the fine folks at the Guggenheim yet. But that's okay. Remember, you're
                 not
                 failing <em>to</em> learn if you're

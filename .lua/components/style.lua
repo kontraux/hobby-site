@@ -28,21 +28,30 @@ body {
 }
 
 .dark_mode #theme {
-    background-color: red;
+    font-family: 'Rokkitt','Courier New', Courier, monospace;
+    color: white;
     border: none;
     background-color: inherit;
     padding: 3px 3px;
-    font-size: 1em;
+    font-size: 1.25em;
+    font-weight: 700;
     cursor: pointer;
     display: inline;
 }
 
 .light_mode #theme {
-    background-color: inherit;
+    font-family: 'Rokkitt','Courier New', Courier, monospace;
     border: none;
+    background-color: inherit;
+    padding: 3px 3px;
+    font-size: 1.25em;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline;
 }
 
 #theme:hover {
+    text-decoration: underline;
     cursor: pointer;
 }
 
@@ -62,7 +71,7 @@ body {
     display: fixed;
 }
 
-.subheadContainer {
+.sub_container {
     padding: 20px;
     text-align: center;
 }
@@ -130,7 +139,6 @@ p, label {
     font-size: 1.25em;
 }
 
-
 .plinks {
     font-family: 'Rokkitt','Courier New', Courier, monospace;
     font-weight: 300;
@@ -143,7 +151,7 @@ p, label {
     text-decoration: underline;
 }
 
-.articleLinks {
+.alinks {
     font-family: 'Rokkitt','Courier New', Courier, monospace;
     font-weight: 300;
     font-size: 1.25em;
@@ -151,7 +159,7 @@ p, label {
     color: red;
 }
 
-.articleLinks:hover {
+.alinks:hover {
     text-decoration: underline;
 }
 
@@ -159,6 +167,7 @@ p, label {
     font-family: 'Rokkitt','Courier New', Courier, monospace;
     font-weight: 700;
     font-size: 1.25em;
+    color: white;
     text-decoration: none;
 }
 
@@ -167,12 +176,12 @@ p, label {
 }
 
 hr {
-    border: 1px solid red;
+    border: 2px solid red;
     margin-top: 10px;
 }
 
 .light_mode hr {
-    border: 1px solid blue;
+    border: 2px solid blue;
 }
 
 img {
@@ -207,37 +216,40 @@ li {
 }
 
 li a {
-    font-size: 1.2em;
+    font-size: 1em;
     color: black;
 }
 
 .nav {
-    position: fixed;
+    position: sticky;
     z-index: 2;
     top: 0;
-    left: 15%;
-    right: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-top: 0;
     padding: 1%;
     list-style-type: none;
     text-align: center;
-    background: linear-gradient(0deg, darkred, red);
-    border: 2px outset rgb(35, 35, 35);
     font-weight: 900;
+    background-color: black;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
 }
 
 .light_mode .nav {
-    background: black;
     box-shadow: none;
     border-bottom: none;
 }
 
 .light_mode li a {
-    color: white;
+    color: black;
 }
 
 .light_mode #theme {
-    color: white;
+    color: black;
 }
 
 table {
@@ -285,19 +297,22 @@ td {
 }
 
 .wrapper {
-    min-height: 100%;
+    position: relative;
     z-index: 1;
+    min-height: 100%;
     top: 0;
-    background-color: black;
-    opacity: 100%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 2%;
     padding-top: 5%;
     margin-left: 15%;
     margin-right: 15%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .light_mode .wrapper {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .small_img {
@@ -320,9 +335,6 @@ td {
 
 .light_mode {
     color: black;
-    /*
-    background-image: url("/assets/images/corina_nebula.webp");
-    */
 }
 
 .light_mode a {
@@ -339,11 +351,14 @@ td {
 
 @media only screen and (max-width: 800px) {
     .wrapper {
-        margin: 10%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 0;
+        margin-bottom: 0;
     }
     .nav {
-        left: 5%;
-        right: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
 ]]

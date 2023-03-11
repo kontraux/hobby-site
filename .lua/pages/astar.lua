@@ -3,15 +3,17 @@ return [[
 <body>
 
 <div class = "wrapper">
-        <h2>A* is born</h2>
-        <h3 style="padding-bottom: 2%">This pathfinding algorithm is gonna make ya famous, baby!</h3>
+        <h1>A* is born</h1>
+        <h2 style="padding-bottom: 2%">This pathfinding algorithm is gonna make ya famous, baby!</h2>
 
+        <hr>
         <center>
             <div>
                 <canvas style="max-width: 100%; max-height: 75%" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
                 <canvas id="loadingCanvas" oncontextmenu="event.preventDefault()" width="0" height="0"></canvas>
             </div>
         </center>
+        <hr>
 
         <p>
             Okay so the reason it's called A* (A star) isn't because of Tinseltown aspirations, but because the researchers who created it had given the very

@@ -4,6 +4,7 @@ return [[
 
 <div class = "wrapper">
 
+      <hr>
         <center>
             <div>
                 <canvas style="width: 100%; height: 75%" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
@@ -11,10 +12,12 @@ return [[
             </div>
         </center>
         <br>
+      <hr>
 
-    <p>Fixed random number seeding, so the phrase order should actually change now. Title screen will be messed up on mobile, but virtual
+    <p>Edit: just don't play on mobile. It's a typing game, ffs.</p>
+    <s>Fixed random number seeding, so the phrase order should actually change now. Title screen will be messed up on mobile, but virtual
     keyboard should work, but I haven't tested yet.
-    </p>
+    </s>
 
     <s>Don't try to play on mobile, it will look really janky and probably won't even trigger the virtual keyboard. Should work on most PCs.
     I'll see if I can get mobile working later.</s>

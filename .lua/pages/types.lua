@@ -3,7 +3,7 @@ return [[
     <body>
         <div class = "wrapper">
 
-        <h2 style = "height:1.2em" id = "typed" ></h2>
+        <h1 style = "height:1.2em" id = "typed" ></h1>
 
         <script>
         let txt = 'Do a custom type.';
@@ -26,7 +26,7 @@ return [[
             questionable, but so is mine, so whatever.
         </p>
 
-        <h3>Create an object.</h3>
+        <h2>Create an object.</h2>
             <p>Our object is going to start as... well, a table of course. So we'll make a <em>new</em> function, so that we can define <em>self.</em> In Lua,
                 there aren't true classes, so you just use a function like this if you want to emulate one.
             </p>
@@ -62,7 +62,7 @@ return [[
             like how it looks, or use the colon operator.</em> 
         </p>
 
-        <h3>Return to monkey.</h3>
+        <h2>Return to monkey.</h2>
         <p>Now we can write our monkey patch, which will be a closure. They call it a monkey patch if you're overriding some default behavior, 
             usually by modifying the standard library. <em>Programming in Lua</em> has an example of overloading the addition (+) operator to add sets together, 
             by changing the __add metamethod. Here, we don't need to do that, there isn't a __type metatable field, so we're just going to redefine the global 

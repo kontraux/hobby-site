@@ -2,53 +2,33 @@ return [[
     <body>
         <div class = "wrapper">
         <h2>What's the lowdown on Lua?</h2>
+
         <p>
-            Why did I use Lua for this site instead of something more popular? <span style="font-weight: 300">It's fun.</span> That's it really, I just appreciate the language. 
-            I've made web apps with JavaScript and Python, one day I'd like to do something with Ruby, those are great too, but Lua just feels DIY and 
-            perfect for a hobby site.
+            Lua is a great language. If you aren't familiar, I recommend stopping by <a class="plinks" href="https://lua.org">Lua.org</a> to get
+            and overview. I'm also using <a class="plinks" href="https://redbean.dev">redbean</a>, which is a very cool project, it's a lightweight
+            web server that is portable- it runs on 6 operating systems!
         </p>
 
         <p>
-            If you aren't familiar with Lua, I'd recommend stopping by <a class="plinks" href="lua.org">Lua.org</a> to get the real lowdown, as this article
-            is just the opinion of a very big brained and charmingly modest self-taught coder (also some would say good looking... hey, I said <em>some!</em>)
+            For me, redbean and Lua were natural choices for my site. I wanted a little bit of a DIY experience, and spinning up a server on Google Cloud and
+            writing library.doItAllForMe() in Node.js or Python just seems a little bit against the spirit of the thing. Might as well use Squarespace, and
+            at that point, may as well just have ChatGPT write a Facebook post for me. And since I wanted to put it on a x260 Thinkpad, I wanted something
+            lightweight with high performance in case I get a visitor (stranger things can happen!). I'm definitely pleased with my choice, while redbean feels 
+            more DIY it's not hard to use, really it's expertly designed, and the technology and philosophy behind it is really interesting.
         </p>
 
         <p>
-            Lua was the first language I learned outside of shell scripting. It's a great first language for an autodidact, it's syntax is really intuitive. Often
-            this is the justification to recommend Python to beginners, but Python has a huge standard library, which I would argue is actually detrimental to
-            learning. The more code you must write yourself, the more you have to actually understand.
-        </p>
-
-        <p>In no particular order, here are some reasons I'm a lifelong Lua fan:</p>
-        <ul class="plist">
-        <li>It's tiny at ~500kb with the full standard library</li>
-        <li>It's portable. No complicated environment configs</li>
-        <li>Widely used for hobby coding, notably embedded/robotics type stuff and videogames</li>
-        <li>Designed as a C scripting/embedded language, so there's a clear learning path to lower level systems programming</li>
-        <li>Great community, if comparatively small</li>
-        <li>Punches above its weight class in terms of performance</li>
-        <li>You can define a function's environment, making security a breeze</li>
-        <li>Monkey-patching is simple, and nobody is judgey about it</li>
-        <li>You haven't truly lived until you've experienced the joy of metamethods and metatables</li>
-        <li>Its creator, Roberto Ierusalimschy, is a great teacher and <em>Programming In Lua</em> is very well written.</li>
-        <li>Not many people have heard about it, so you get to tell all your friends about something cool!</li>
-        </ul>
-
-        <p>
-            Again, this isn't a criticism of other languages, they definitely have their strengths as well. And there are, of course, disadvantages to using Lua.
-            The libraries are pretty sparse, and if you use Windows, you're probably going to have a bad time compiling them. Lua doesn't run in the browser, so
-            you'll have to use JavaScript and/or Emscripten if you want to do animations and games. It doesn't open many doors for employment, as it's most
-            often only used professionally in the gaming industry, and as a secondary language for Electrical Engineering. And even though I picked on Python a bit,
-            sometimes you really just aren't in the mood to write your own libraries.
+            Lua really is just perfect for hobby coding. It has seen a lot of use in gaming and modding because it's quick to write and easy to sandbox, and 
+            because it's so lightweight and fast, it's also used in mechatronics and robotics type stuff. There aren't many jobs with the title "Lua developer," 
+            mostly the people who use it professionally are C developers and use it as an embedded\extension language. This leads a lot of people to think it's
+            not as popular as it really is- it doesn't get a lot of libraries written for it, or articles written about it, but lots of people use it for
+            small projects, scripts, or as a secondary language. 
         </p>
 
         <p>
-            One final thought to consider: Lua may never be number one on the Tiobe Index. It may not go into outer space, like 
-            <a class="plinks" href="https://www.theverge.com/2022/8/18/23206110/james-webb-space-telescope-javascript-jwst-instrument-control">JavaScript did</a>,
-            or capture the imagination of poets, <a class="plinks" href="https://peps.python.org/pep-0020/">like Python</a>. But that's okay. Check out any Lua board 
-            and just see how many young people are learning Lua right now. Because of Roblox, Pico-8, World of Warcraft, eLua, Mako Server, and many other neat things,
-            an entire generation of future coders are cutting their teeth with Lua, and learning to love learning. Lua's going to be around for a long time. So 
-            technical details aside, maybe consider Lua for your next project because... <span style="font-weight: 300">It's fun!</span>
+            When I started coding, I was stoked on Python due to the syntax, but I was disappointed that it was just a wrapper for C libraries and pretty much 
+            useless in other contexts due to the GIL and poor performance. If you're learning coding for fun and aren't looking for <s>dependency hell</s> drop-in
+            solutions, Lua is definitely a good language to consider.
         </p>
 
     </body>

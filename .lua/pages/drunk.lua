@@ -1,16 +1,17 @@
 return [[
     <body>
         <div class = "wrapper">
+        <h1>It's five o'clock somewhere!</h1>
         <h2>Get drunk and take a walk.</h2>
 
+        <hr>
         <center>
             <div>
                 <canvas style="max-width: 100%; max-height: 75%" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
                 <canvas id="loadingCanvas" oncontextmenu="event.preventDefault()" width="0" height="0"></canvas>
             </div>
         </center>
-
-        <h3>It's five o'clock somewhere!</h3>
+        <hr>
         <p>
             A 'walker' is an algorithm that keeps track of its own location as it iterates over a table. In my roguelike game, I've used walkers
             to do all kinds of nifty things. I can drop one on the player's location and clear a path to the exit, or drop one at the edge of the map and
@@ -60,7 +61,7 @@ return [[
             you a good idea of how it works, so you and your friend, George Dickel, can code up your own walkers!
         </p>
     
-        <h3>Pro tips for drinking pros... <em>hic!</em></h3>
+        <h2>Pro tips for drinking pros... <em>hic!</em></h2>
     
         <p>If you want to give your walker 'vision' to be able to act upon the tiles around him, you can add two more for loops under x and y.
             The range that it iterates can be -1, 1. This will iterate over 9 tiles - your drunkard's tile and the 8 adjacent ones. That way, he can

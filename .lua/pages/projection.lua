@@ -2,9 +2,9 @@ return [[
 <body>
     <div class = "wrapper">
 
-    <h2>Do an axonometric projection.</h2>
+    <h1>Do an axonometric projection.</h1>
 
-    <h3>I'm not projecting, you're projecting!</h3>
+    <h2>I'm not projecting, you're projecting!</h2>
 
     <p>The term 'isometric' is more commonly used when referring to 2d videogames with a 3d perspective, also called 2.5d. To be technically correct,
         isometric projection uses 30 degree parallel angles, and it's a type of axonometric projection. I'll use the term axonometric because it's the
