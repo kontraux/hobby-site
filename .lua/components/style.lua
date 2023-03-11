@@ -5,6 +5,7 @@ html {
 }
 
 body {
+    position: relative;
     margin: 0;
 }
 
@@ -227,6 +228,7 @@ li a {
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 0;
+    margin-bottom:0;
     padding: 1%;
     list-style-type: none;
     text-align: center;
@@ -234,9 +236,8 @@ li a {
     background-color: black;
 }
 
-.nav a {
+.nav button {
     color: white;
-    text-decoration: none;
 }
 
 .light_mode .nav {
@@ -245,12 +246,9 @@ li a {
 }
 
 .light_mode li a {
-    color: black;
+    color: white;
 }
 
-.light_mode #theme {
-    color: black;
-}
 
 table {
     margin: auto;

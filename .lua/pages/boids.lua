@@ -13,7 +13,7 @@ return [[
             big mess of these things.
         </p>
 
-        <h2>Avian Arithmetic and Aeronautical Algebra</h2>
+        <h3>Avian Arithmetic and Aeronautical Algebra</h3>
         <p>If you were to explain the features of a bird to a child, how would you do it? Of course, you'd say, "Well,
             little Timmy, a bird has a color, a a size, a position, and 3 discrete 2 float component vectors with a clamp that prevents 
             them from moving arbitrarily fast." Timmy's in 8th grade, he should expect some sass when he asks you to explain birds.
@@ -100,7 +100,7 @@ return [[
             Let's start adding rules, so our update
             function can do more than just add zeroes together to no effect.</p>
 
-        <h2>Rule 1: Compete for the center of the flock.</h2>
+        <h3>Rule 1: Compete for the center of the flock.</h3>
         <p>As David Attenborough has taught us, boids are social objects. To maintain the flock, boids will consistently
             steer to its center. This should mean
             that if a boid is far from the flock, this behavior will cause it to return, and if it's near the center, it
@@ -169,7 +169,7 @@ return [[
             update.
         </p>
 
-        <h2>Rule 2: Match the speed of the flock.</h2>
+        <h3>Rule 2: Match the speed of the flock.</h3>
         <p>This one should be an easy one. <em>Famous last words.</em> We already know how to iterate through the flock
             and get an average, so
             we just need to do that with all of our vectors, and then set all of the boids' v2 to that. </p>
@@ -210,7 +210,7 @@ return [[
         </p>
 
 
-        <h2>Rule 3: Avoid collisions with other boids.</h2>
+        <h3>Rule 3: Avoid collisions with other boids.</h3>
         <p>We'll say that our boids are more Responsible Ravens than Lush Larks, so they'll avoid FUI (flying under the
             influence), and they'll
             be good at avoiding mid-flight collisions. So we need to do 2 new things here. One, they need to have a way
@@ -315,7 +315,7 @@ return [[
         </table>
 
 
-        <h2 style="clear:both">Rule 0: Steal someone else's code.</h2>
+        <h3 style="clear:both">Rule 0: Steal someone else's code.</h3>
         <p>I'm using the word 'steal' for comedic effect, everything that I've looked at using actually has a permissive
             license. Being self-taught, I'm both
             the student and the teacher, and the teacher part has decided that using someone else's code here is fine,
@@ -331,7 +331,7 @@ return [[
             us to boid rule 5 of 3.
         </p>
 
-        <h2>Rule 0 the 2nd: Cover up your mistakes and go into denial.</h2>
+        <h3>Rule 0 the 2nd: Cover up your mistakes and go into denial.</h3>
         <p>And just like that, our confetti simulator works perfectly!</p>
         <video src="./assets/videos/boid_confetti.mp4" controls></video>
 
@@ -353,7 +353,8 @@ return [[
             boids[i].style.left = -20
             boids[i].style.top = height * Math.random()
             boids[i].animate( [ { transform: `translateX(${width}px)` }, {transform: `translateY(${height * Math.random()}px)`}], { duration: (7000 * (i + Math.random())) })
-            document.body.appendChild(boids[i])
+            let wrapper = document.getElementsByClassName('wrapper');
+            wrapper[0].prepend(boids[i]);
         }
     }
 
