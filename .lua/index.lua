@@ -6,7 +6,8 @@ return
         <hr>
 
         <p>This website is a self-hosted hobby project. It is scripted in Lua and running from a quirky little webserver on a 
-            refurbished Thinkpad in my apartment. <a class="plinks" href="language">Why use Lua?</a>
+            refurbished Thinkpad in my apartment. If you have any questions about the site, feel free to visit the 
+            <a class="plinks" href="/faq">FAQ</a> or <a class="plinks" href="/contact">contact me.</a>
         </p>
 
         <p>Here you'll find some articles and tutorials about coding and some micro apps. It's my little playground where I can write
